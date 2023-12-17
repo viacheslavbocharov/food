@@ -1,0 +1,148 @@
+@import "../../../../../scss/vars";
+@import "../../../../../scss/mixins";
+
+.restaraunts {
+  padding-bottom: 121px;
+
+  &__container {
+    max-width: 1150px;
+    padding: 0 20px;
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 40px;
+  }
+
+  &__title {
+    color: #2b2b43;
+    font-family: var(--ff);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include tablet-small {
+        gap: 20px;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+  }
+}
+.restaraunts-item {
+  border-radius: 16px;
+  border: 1px solid #edeef2;
+
+  &__img {
+    img {
+      border-radius: 16px 16px 0 0;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    padding: 16px;
+    position: relative;
+  }
+
+  &__title {
+    color: #2b2b43;
+    font-family: var(--ff);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-bottom: 6px;
+  }
+
+  &__time-price {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  &__clock {
+    display: flex;
+    align-items: center;
+  }
+
+  &__dot {
+    display: flex;
+    align-items: center;
+  }
+
+  &__time,
+  &__price {
+    color: #83859c;
+    font-family: var(--ff);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+
+  &__price {
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background: #edeef2;
+  }
+
+  &__tag-icon {
+  }
+
+  &__tag-title {
+  }
+
+  &__cart {
+  }
+
+  &__cart-icon {
+    position: absolute;
+    right: 18px;
+    top: 16px;
+  }
+
+  &__cart-qty {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    border-radius: 7px;
+    border: 1px solid #fff;
+    background: #4e60ff;
+
+    display: inline-block;
+    padding: 1px 5px;
+    span {
+      color: #fff;
+      text-align: center;
+      font-family: var(--ff);
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 14px;
+    }
+  }
+}

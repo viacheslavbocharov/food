@@ -1,0 +1,40 @@
+<div class="restaraunts">
+  <div class="restaraunts__container">
+    <div class="restaraunts__title">Nearby restaurants</div>
+    <div class="restaraunts__list">
+      <div class="restaraunts-item" *ngFor="let item of restaraunts">
+        <div class="restaraunts-item__img">
+          <img [src]="item.img" [alt]="item.title" />
+        </div>
+        <div class="restaraunts-item__info">
+          <div class="restaraunts-item__title">{{ item.title }}</div>
+
+          <div class="restaraunts-item__time-price">
+            <div class="restaraunts-item__clock"><img src="assets/home/restaraunts/clock.png" alt="clock"></div>
+            <div class="restaraunts-item__time">{{ item.time }}</div>
+            <div class="restaraunts-item__dot"><img src="assets/home/restaraunts/dot.png" alt="dot"></div>
+            <div class="restaraunts-item__price">{{ item.price }}</div>
+          </div>
+          
+          
+          <div class="restaraunts-item__tags">
+            <div class="restaraunts-item__tag" *ngFor="let tag of item.tags">
+              <img class="restaraunts-item__tag-icon" [src]="tag.img" [alt]="tag.title" />
+              <div class="restaraunts-item__tag-title">{{ tag.title }}</div>
+            </div>
+          </div>
+
+
+          <div class="restaraunts-item__cart-icon"><img src="assets/home/restaraunts/cart.png" alt="cart"></div>
+          <div class="restaraunts-item__cart-qty" *ngIf="item.cart"><span>{{ item.cart }}</span></div>
+
+
+          <div class="restaraunts-item__cart">
+            
+          </div>
+          <!--<div *ngIf="item.cart">Active</div>{{ item.cart }}</div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
