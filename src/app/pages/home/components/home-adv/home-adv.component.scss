@@ -1,0 +1,120 @@
+@import "../../../../../scss/vars";
+@import "../../../../../scss/mixins";
+
+.home-adv {
+  margin-top: 24px;
+
+  &__container {
+    max-width: 1150px;
+    padding: 0 20px;
+    width: 100%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+
+    @include tablet-small {
+        gap: 20px;
+
+      }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+
+      }
+  }
+}
+.banner {
+  min-height: 188px;
+  border-radius: 16px;
+  display: flex;
+  @include tablet {
+    flex-direction: column-reverse;
+    //justify-content: center;
+    //align-content: center;
+    padding: 16px;
+    padding-bottom: 0;
+  }
+
+  &_purple {
+    background: #f3f4ff;
+  }
+
+  &_orange {
+    background: #fff3ed;
+  }
+
+  &__img {
+    align-self: flex-end;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+    @include tablet {
+        align-self:center;
+      }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    min-width: 200px;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: flex-start;
+      gap: 0;
+    }
+  }
+
+  &__offer {
+    margin-top: 24px;
+    @include tablet {
+      margin-top: 0px;
+    }
+  }
+
+  &__title {
+    color: #2b2b43;
+    font-family: var(--ff);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    margin-bottom: 8px;
+  }
+
+  &__discount {
+    color: #4e60ff;
+    font-family: var(--ff);
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 56px;
+    letter-spacing: 0.1px;
+    @include tablet-small {
+        font-size: 38px;
+
+      }
+  }
+
+  &__type {
+    color: #83859c;
+    font-family: var(--ff);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+  }
+}
+
+.purple {
+  background: #f3f4ff;
+  color: #4e60ff;
+}
+
+.orange {
+  background: #fff3ed;
+  color: #fd6d22;
+}
